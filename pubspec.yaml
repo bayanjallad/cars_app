@@ -44,6 +44,8 @@ dependencies:
   path: ^1.9.0
   dotted_border: ^2.1.0
   flutter_otp_text_field: ^1.4.0+2
+  share_plus: ^10.1.4
+  url_launcher: ^6.3.1
 
 dev_dependencies:
   flutter_test:
