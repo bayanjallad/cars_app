@@ -40,6 +40,20 @@ class Strings implements Translations {
   static const String MESSAGE = "Message";
   static const String PROFILE = "Profile";
 
+  //onboarding
+  static const String FINDDREEMCAR = "Find Your Dream Car";
+  static const String FINDTHECAR =
+      "Find the car of your dreams from \nthe world's largest car market";
+  static const String SELLYOURCAR = "Sell Your Car";
+  static const String POSTYOURAS =
+      "Post your ad to interested buyers\naround the world";
+  static const String LETSGETSTARTED = "Let’s Get Started";
+  static const String SIGNUPORLOGIMN =
+      "Sign up or log in to find out the\nbest car for you";
+  static const String ASGUEST = "Continue as a guest";
+  static const String GETSTARTED = "Get Started";
+  static const String SKIP = "Skip";
+
 // auth
 
   static const String CREATEACCOUNT = "Create Account";
@@ -208,6 +222,15 @@ class Strings implements Translations {
           PLEASENTERYOURNEWPASS: "Please enter the new password",
           NEWPASSWORD: "New password",
           CONFIRMPASSWORD: "Confirm password",
+          FINDDREEMCAR: "Find Your Dream Car",
+          FINDTHECAR:
+              "Find the car of your dreams from \nthe world's largest car market",
+          SELLYOURCAR: "Sell Your Car",
+          POSTYOURAS: "Post your ad to interested buyers\naround the world",
+          LETSGETSTARTED: "Let’s Get Started",
+          SIGNUPORLOGIMN: "Sign up or log in to find out the\nbest car for you",
+          GETSTARTED: "Get Started",
+          SKIP: "Skip",
         },
         'ar': {
           LOCATION: "الموقع",
@@ -295,10 +318,19 @@ class Strings implements Translations {
               "الرجاء إدخال رمز التحقق، \nلقد أرسلناه إلى الرقم ",
           RESENDCODEIN: "إعادة إرسال الكود في",
           VERIFY: "تأكيد",
-           CREATENEWPASSWORD: "إنشاء كلمة مرور جديدة",
+          CREATENEWPASSWORD: "إنشاء كلمة مرور جديدة",
           PLEASENTERYOURNEWPASS: "الرجاء إدخال كلمة المرور الجديدة",
           NEWPASSWORD: "كلمة المرور الجديدة",
           CONFIRMPASSWORD: "تأكيد كلمة المرور",
+           FINDDREEMCAR: "ابحث عن سيارة أحلامك",
+          FINDTHECAR:
+              "ابحث عن سيارة أحلامك من أكبر سوق\n للسيارات في العالم",
+          SELLYOURCAR: "بيع سيارتك",
+          POSTYOURAS: "قم بنشر إعلانك للمشترين\n المهتمين حول العالم",
+          LETSGETSTARTED: "لنبدأ",
+          SIGNUPORLOGIMN: "سجل أو قم بتسجيل الدخول\n لمعرفة أفضل سيارة لك",
+          GETSTARTED: "ابدأ",
+          SKIP: "يتخطى",
         },
       };
 }
