@@ -101,43 +101,43 @@ class Thirdscreen extends StatelessWidget {
                   borderSidecolor: lightgray,
                 ),
                 SizedBox(height: screenHight * 0.14),
-                Padding(
-                  padding: onlyButtomPadding(0.02),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        Strings.DONTHAVEACCOUNT.tr,
-                        textAlign: TextAlign.center,
-                        style: Theme.of(context)
-                            .textTheme
-                            .labelLarge!
-                            .copyWith(color: gray),
+              ],
+            ),
+          ),
+          Padding(
+            padding: onlyButtomPadding(0.02),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  Strings.DONTHAVEACCOUNT.tr,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context)
+                      .textTheme
+                      .labelLarge!
+                      .copyWith(color: gray),
+                ),
+                InkWell(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const SignUpPage(),
                       ),
-                      InkWell(
-                        onTap: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => const SignUpPage(),
-                            ),
-                          );
-                        },
-                        child: Text(
-                          Strings.SIGNUP.tr,
-                          textAlign: TextAlign.center,
-                          style: Theme.of(context)
-                              .textTheme
-                              .displayLarge!
-                              .copyWith(color: blue),
-                        ),
-                      )
-                    ],
+                    );
+                  },
+                  child: Text(
+                    Strings.SIGNUP.tr,
+                    textAlign: TextAlign.center,
+                    style: Theme.of(context)
+                        .textTheme
+                        .displayLarge!
+                        .copyWith(color: blue),
                   ),
                 )
               ],
             ),
-          ),
+          )
         ],
       ),
     );
