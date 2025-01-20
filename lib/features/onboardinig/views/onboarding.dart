@@ -11,7 +11,8 @@ import 'firstScreen.dart';
 import 'secondScreen.dart';
 import 'thirdscreen.dart';
 
-//late SharedPreferences prefOnboarding;
+//!
+  late SharedPreferences prefOnboarding;
 
 class OnBordingScreen extends StatefulWidget {
   const OnBordingScreen({super.key});
@@ -22,11 +23,10 @@ class OnBordingScreen extends StatefulWidget {
 
 class _OnBordingScreenState extends State<OnBordingScreen> {
   final PageController _controller = PageController();
-
   int _index = 0;
+
   @override
   Widget build(BuildContext context) {
-   // prefOnboarding.setBool('isOnboardingShown', true);
     return Scaffold(
       backgroundColor: Theme.of(context).scaffoldBackgroundColor,
       body: Padding(
@@ -38,8 +38,16 @@ class _OnBordingScreenState extends State<OnBordingScreen> {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
+                //!
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () async {
+                       await prefOnboarding.setBool('isOnboardingShown', true);
+                      Navigator.pushReplacement(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Thirdscreen(),
+                          ));
+                    },
                     child: Text(
                       Strings.SKIP.tr,
                       style: Theme.of(context)
@@ -81,14 +89,16 @@ class _OnBordingScreenState extends State<OnBordingScreen> {
                 Width: screenWidth,
                 Riduse: 12,
                 Elevated: 2,
-                OnPressed: () {
-                  if (_index == 1) {
+                OnPressed: () async{
+                  if (_index == 1){
                     Navigator.pushReplacement(
                         context,
                         MaterialPageRoute(
                           builder: (context) => const Thirdscreen(),
                         ));
                   } else {
+                    //!
+                   await prefOnboarding.setBool('isOnboardingShown', true);
                     _controller.animateToPage(_index + 1,
                         duration: const Duration(milliseconds: 250),
                         curve: Curves.linear);

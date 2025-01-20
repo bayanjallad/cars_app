@@ -8,10 +8,12 @@ import 'core/resources/string_controller.dart';
 import 'core/resources/theme.dart';
 import 'features/splash/view/splash_screen.dart';
 
+late SharedPreferences prefOnboarding;
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   sharedPrefLang = await SharedPreferences.getInstance();
- // prefOnboarding = await SharedPreferences.getInstance();
+  //!
+  prefOnboarding = await SharedPreferences.getInstance();
 
   runApp(
     DevicePreview(

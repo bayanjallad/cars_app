@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import '../../../../config/responsive.dart';
 import '../../../core/resources/color.dart';
 import '../../onboardinig/views/onboarding.dart';
+import '../../onboardinig/views/thirdscreen.dart';
 //import '../../onboardinig/views/thirdscreen.dart';
-
 
 class SplashScreenPage extends StatefulWidget {
   const SplashScreenPage({super.key});
@@ -23,10 +23,11 @@ class _SplashscreenPageState extends State<SplashScreenPage> {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) => 
-            //prefOnboarding.getBool("isOnboardingShown")==true?
-            // const Thirdscreen() :
-              const OnBordingScreen(),
+            builder: (context) =>
+                //!
+                prefOnboarding.getBool("isOnboardingShown") == false 
+                    ? const OnBordingScreen()
+                    : const Thirdscreen(),
           ),
         );
       },
@@ -36,13 +37,11 @@ class _SplashscreenPageState extends State<SplashScreenPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: blue,
-      body: SizedBox(
-        width: screenWidth,
-        height: screenHight,
-        child: Center(child: Image.asset("images/logo.png")),
-        )
-      );
-    
+        backgroundColor: blue,
+        body: SizedBox(
+          width: screenWidth,
+          height: screenHight,
+          child: Center(child: Image.asset("images/logo.png")),
+        ));
   }
 }
